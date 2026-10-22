@@ -70,7 +70,7 @@ This is an early prototype and is still under development.
 
 If time runs out, your attempt to leave the school fails. Select Play Again to try once more.
 
-# Language Settings
+### Language Settings
 
 You can switch between Japanese and English from the settings menu on the title screen.
 
