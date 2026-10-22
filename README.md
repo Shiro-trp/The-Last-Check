@@ -1,4 +1,4 @@
-# 音楽室からの完退 | The Last Check
+# 音楽室からの完退 The Last Check
 
 ## Version: 0.1.0 (Prototype)
 
