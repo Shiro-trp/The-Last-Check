@@ -1,14 +1,14 @@
-**音楽室からの完退 | The Last Check**
+# 音楽室からの完退 | The Last Check
 
-Version: 0.1.0 (Prototype)
+## Version: 0.1.0 (Prototype)
 
-日本語 / English
+### 日本語 / English
 
 ---
 
 ## 日本語
 
-# ゲーム概要
+### ゲーム概要
 
 『音楽室からの完退』は、放課後の学校を舞台にした2D探索ゲームです。
 
@@ -18,7 +18,7 @@ Version: 0.1.0 (Prototype)
 
 本作は現在開発中の試作版です。
 
-# 操作方法
+### 操作方法
 
 - ◀ / ▶：キャラクターを左右に移動
 - 調べる：近くの設備を調べ、不備を確認
@@ -28,14 +28,14 @@ Version: 0.1.0 (Prototype)
 - 玄関から完退する：玄関から学校を出る
 - もう一度プレイ：ゲームを最初からやり直す
 
-# クリア条件
+### クリア条件
 
 1. 校内のすべての不備を修正する。
 2. 3分以内に玄関へ到達する。
 
 時間切れになると完退失敗となります。「もう一度プレイ」を選択して再挑戦してください。
 
-# 言語設定
+### 言語設定
 
 タイトル画面の設定から、日本語と英語を切り替えられます。
 
@@ -43,7 +43,7 @@ Version: 0.1.0 (Prototype)
 
 ## English
 
-# Game Overview
+### Game Overview
 
 The Last Check is a 2D exploration game set in a school after classes.
 
@@ -53,7 +53,7 @@ You have 3 minutes. Fix every problem and reach the exit before time runs out.
 
 This is an early prototype and is still under development.
 
-# Controls
+### Controls
 
 - ◀ / ▶: Move the character left or right
 - Inspect: Check nearby facilities for problems
@@ -63,7 +63,7 @@ This is an early prototype and is still under development.
 - Leave School: Exit through the entrance
 - Play Again: Restart the game
 
-# How to Win
+### How to Win
 
 1. Fix every problem in the school.
 2. Reach the entrance within 3 minutes.
@@ -114,7 +114,7 @@ Implemented Features
 
 ---
 
-# 開発状況 | Development Status
+### 開発状況 | Development Status
 
 本作は現在、試作版 ver.0.1 の段階です。
 今後のアップデートで機能や演出を追加していく予定です。
