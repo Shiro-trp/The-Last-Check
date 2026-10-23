@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音楽室からの完退</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- タイトル画面 -->
+  <section id="title-screen">
+    <div class="title-content">
+      <div class="security-header">
+        <span>NIGHT SECURITY SYSTEM</span>
+        <span class="rec">● REC</span>
+      </div>
+
+      <div class="title-main">
+        <p class="incident">AFTER SCHOOL / INCIDENT 001</p>
+        <h1 data-i18n="title">音楽室からの完退</h1>
+        <p class="subtitle" data-i18n="subtitle">
+          放課後。まだ、帰れない。
+        </p>
+        <div class="red-line"></div>
+      </div>
+
+      <button id="to-instructions-button" data-i18n="start">
+        START GAME
+      </button>
+      <button id="settings-button">SETTINGS</button>
+
+      <p class="version">VER.0.1 β</p>
+    </div>
+  </section>
+
+  <!-- 操作説明画面 -->
+  <section id="instructions-screen" style="display:none">
+    <div class="title-content">
+      <div class="security-header">
+        <span data-i18n="briefing">MISSION BRIEFING</span>
+        <span class="rec">● REC</span>
+      </div>
+
+      <div class="title-main">
+        <p class="incident">MISSION 001 / AFTER SCHOOL</p>
+        <h1 data-i18n="mission">退校準備</h1>
+        <p class="subtitle" data-i18n="missionSubtitle">
+          校内の確認を完了せよ。
+        </p>
+        <div class="red-line"></div>
+      </div>
+
+      <div class="warning-box">
+        <p class="warning-title" data-i18n="controlsTitle">
+          【操作方法】
+        </p>
+        <p data-i18n="moveHelp">◀ ▶：移動</p>
+        <p data-i18n="inspectHelp">調べる：設備の不備を確認</p>
+        <p data-i18n="fixHelp">不備を直す：見つけた不備を修正</p>
+        <p data-i18n="goalHelp">目標：すべての不備を解消して玄関へ</p>
+      </div>
+
+      <button id="start-button" data-i18n="begin">
+        ▶ GAME START
+      </button>
+      <p class="version">VER.0.1 β / GOOD LUCK</p>
+    </div>
+  </section>
+
+  <!-- 設定画面 -->
+  <section id="settings-screen" style="display:none">
+    <div class="title-content">
+      <div class="security-header">
+        <span>NIGHT SECURITY SYSTEM</span>
+        <span class="rec">● REC</span>
+      </div>
+
+      <h1>SETTINGS</h1>
+      <p data-i18n="languageLabel">LANGUAGE / 言語</p>
+
+      <div class="language-buttons">
+        <button id="japanese-button">日本語</button>
+        <button id="english-button">English</button>
+      </div>
+
+      <p id="language-status"></p>
+      <button id="back-to-title-button" data-i18n="back">
+        BACK
+      </button>
+    </div>
+  </section>
+
+  <!-- ゲーム本編 -->
+  <main class="game">
+    <h1 data-i18n="gameTitle">完退</h1>
+    <div id="timer">残り時間：05:00</div>
+    <p id="message" data-i18n="initialMessage">
+      音楽室。設備を確認して、完退を目指そう。
+    </p>
+
+    <!-- 教室 -->
+    <div class="room music-room" id="room">
+      <div class="equipment window" id="window">
+        <img id="window-image"
+             src="assets/window_open.png" alt="開いている窓">
+      </div>
+
+      <div class="equipment light" id="light">
+        <img id="light-image"
+             src="assets/light.png" alt="電気">
+      </div>
+
+      <div class="desk" id="desk">
+        <img id="desk-image"
+             src="assets/desk_false.png" alt="机と椅子">
+      </div>
+
+      <div class="player" id="player">
+        <img src="assets/player.png" alt="プレイヤー">
+      </div>
+    </div>
+
+    <!-- 廊下 -->
+    <div id="hallway-scene" hidden>
+      <div id="hallway-viewport">
+        <div id="hallway-world">
+          <div class="entrance" id="entrance">
+            <span data-i18n="entrance">玄関</span>
+          </div>
+
+          <div class="hall-door" style="left:250px">
+            <span data-i18n="classroom1">普通教室1</span>
+          </div>
+          <div class="hall-door" style="left:600px">
+            <span data-i18n="classroom2">普通教室2</span>
+          </div>
+          <div class="hall-door" style="left:950px">
+            <span data-i18n="classroom3">普通教室3</span>
+          </div>
+
+          <div id="hall-player">
+            <img src="assets/player.png" alt="プレイヤー">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- エリア移動 -->
+    <div class="area-controls">
+      <button id="enter-hallway" data-i18n="toHallway">
+        廊下へ出る
+      </button>
+      <button id="enter-classroom" hidden data-i18n="enterClassroom">
+        教室に入る
+      </button>
+      <button id="exit-school-button" hidden data-i18n="exitSchool">
+        玄関から完退する
+      </button>
+      <button id="restart-button" hidden data-i18n="restart">
+        もう一度プレイ
+      </button>
+    </div>
+
+    <!-- 移動 -->
+    <div class="controls">
+      <button id="left-button" data-i18n="left">◀ 左</button>
+      <button id="right-button" data-i18n="right">右 ▶</button>
+    </div>
+
+    <button id="inspect-button" class="inspect" data-i18n="inspect">
+      調べる
+    </button>
+    <button id="fix-button" class="fix" hidden data-i18n="fix">
+      不備を直す
+    </button>
+
+    <p id="result"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
