@@ -818,3 +818,16 @@ body:not(.game-started) #hallway-scene {
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
+
+/* エリア移動ボタンのサイズ調整 */
+#enter-hallway,
+#enter-classroom,
+#exit-school-button,
+#restart-button {
+  display: inline-block;
+  min-height: 56px;
+  padding: 14px 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
