@@ -810,24 +810,31 @@ body:not(.game-started) #hallway-scene {
   }
 }
 
-/* 場所移動ボタンを大きくする */
+/* エリア移動ボタン */
+.area-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  margin: 10px 0;
+  min-height: 44px;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* エリア移動ボタンのサイズ */
 .area-controls button {
+  flex: 1 1 140px;
+  min-width: 0;
   min-height: 52px;
   padding: 12px 8px;
   font-size: 16px;
   line-height: 1.4;
+  box-sizing: border-box;
   overflow-wrap: anywhere;
 }
 
-/* エリア移動ボタンのサイズ調整 */
-#enter-hallway,
-#enter-classroom,
-#exit-school-button,
-#restart-button {
-  display: inline-block;
-  min-height: 56px;
-  padding: 14px 12px;
-  font-size: 18px;
-  line-height: 1.5;
-  box-sizing: border-box;
+/* 非表示ボタンは場所を取らない */
+.area-controls button[hidden] {
+  display: none;
 }
