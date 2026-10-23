@@ -809,3 +809,12 @@ body:not(.game-started) #hallway-scene {
     opacity: 0.45;
   }
 }
+
+/* 場所移動ボタンを大きくする */
+.area-controls button {
+  min-height: 52px;
+  padding: 12px 8px;
+  font-size: 16px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
