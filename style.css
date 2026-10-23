@@ -813,28 +813,37 @@ body:not(.game-started) #hallway-scene {
 /* エリア移動ボタン */
 .area-controls {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+
   width: 100%;
   margin: 10px 0;
-  min-height: 44px;
-  align-items: stretch;
+  padding: 0;
+
   box-sizing: border-box;
 }
 
-/* エリア移動ボタンのサイズ */
 .area-controls button {
-  flex: 1 1 140px;
-  min-width: 0;
-  min-height: 52px;
-  padding: 12px 8px;
-  font-size: 16px;
-  line-height: 1.4;
+  display: block;
+  flex: 0 0 auto;
+
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 56px;
+
+  margin: 0;
+  padding: 14px 12px;
+
   box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: normal;
   overflow-wrap: anywhere;
 }
 
-/* 非表示ボタンは場所を取らない */
+/* 非表示ボタンは表示しない */
 .area-controls button[hidden] {
-  display: none;
+  display: none !important;
 }
