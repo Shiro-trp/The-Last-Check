@@ -1,6 +1,6 @@
 # 音楽室からの完退 The Last Check
 
-## Version: 0.1.0 (Prototype)
+## Version: 0.2.0 (Prototype)
 
 ### 日本語 / English
 
