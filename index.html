@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>音楽室からの完退</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/title.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/equipment.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/events.css">
 </head>
 <body>
 
@@ -93,7 +98,6 @@
 
   <!-- ゲーム本編 -->
   <main class="game">
-    <h1 data-i18n="gameTitle">完退</h1>
     <div id="timer">残り時間：05:00</div>
     <p id="message" data-i18n="initialMessage">
       音楽室。設備を確認して、完退を目指そう。
@@ -139,12 +143,18 @@
             <span data-i18n="classroom3">普通教室3</span>
           </div>
 
-          <div id="hall-player">
-            <img src="assets/player.png" alt="プレイヤー">
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- 管理員さん -->
+  <div id="administrator">
+  <img src="assets/administrator.png" alt="管理員さん">
+  <span id="administrator-warning" hidden>見つかった！</span>
+  </div>
+
+  <div id="hall-player">
+  <img src="assets/player.png" alt="プレイヤー">
+  </div>
+  </div>
+  </div>
+  </div>
 
     <!-- エリア移動 -->
     <div class="area-controls">
@@ -177,7 +187,12 @@
 
     <p id="result"></p>
   </main>
-
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
+<script src="js/player.js"></script>
+<script src="js/rooms.js"></script>
+<script src="js/equipment.js"></script>
+<script src="js/game.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/administrator.js"></script>
 </body>
 </html>
