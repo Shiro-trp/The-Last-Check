@@ -80,7 +80,7 @@ You can switch between Japanese and English from the settings menu on the title 
 
 ver.0.1 — Prototype
 
-リリース日： 2026-10-22
+リリース日： 2026-10-23
 ステータス： 開発中（試作版）
 
 実装済み機能
@@ -98,7 +98,7 @@ ver.0.1 — Prototype
 
 ver.0.1 — Prototype
 
-Release Date: October 22, 2026
+Release Date: October 23, 2026
 Status: In Development (Prototype)
 
 Implemented Features
