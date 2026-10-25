@@ -14,7 +14,9 @@
 
 プレイヤーは音楽室から出発し、校内の設備を確認して不備を修正しながら、玄関からの完退を目指します。
 
-制限時間は3分間。 すべての不備を解消し、時間内に玄関へたどり着きましょう。
+しかし、校内には管理員さん（鬼）が巡回しています。見つかると追いかけられ、捕まるとゲームオーバーになってしまいます。管理員さんの動きにも注意しながら、すべての不備を解消して完退しましょう。
+
+制限時間は3分間。時間内にすべての不備を修正し、玄関へたどり着くことが目標です。
 
 本作は現在開発中の試作版です。
 
@@ -33,7 +35,12 @@
 1. 校内のすべての不備を修正する。
 2. 3分以内に玄関へ到達する。
 
-時間切れになると完退失敗となります。「もう一度プレイ」を選択して再挑戦してください。
+### ゲームオーバー条件
+
+- 制限時間の3分を超過する。
+- 管理員さんに捕まる。
+
+ゲームオーバーになった場合は、「もう一度プレイ」を選択して再挑戦してください。
 
 ### 言語設定
 
@@ -49,7 +56,9 @@ The Last Check is a 2D exploration game set in a school after classes.
 
 Starting in the music room, you must inspect school facilities, fix any problems you find, and make your way to the entrance.
 
-You have 3 minutes. Fix every problem and reach the exit before time runs out.
+However, a school administrator patrols the hallways. If you are spotted, the administrator will chase you. Getting caught results in a game over, so stay alert while completing your inspection.
+
+You have 3 minutes to fix every problem and reach the entrance.
 
 This is an early prototype and is still under development.
 
@@ -68,7 +77,12 @@ This is an early prototype and is still under development.
 1. Fix every problem in the school.
 2. Reach the entrance within 3 minutes.
 
-If time runs out, your attempt to leave the school fails. Select Play Again to try once more.
+### Game Over Conditions
+
+- The 3-minute time limit expires.
+- You are caught by the school administrator.
+
+If the game ends in failure, select Play Again to try once more.
 
 ### Language Settings
 
