@@ -94,6 +94,19 @@ ver.0.1 — Prototype
 - 完退成功・時間切れによる完退失敗
 - リスタート機能
 
+ver.0.2.0 — Administrator Update
+
+リリース日：2026-10-26
+ステータス：開発中
+
+実装済み機能
+
+- 管理員さん（鬼）の導入
+- 管理員さんの巡回・追跡システム
+- 捕まるとゲームオーバーになる機能
+- ファイル構成の再編（css/・js/ フォルダの作成）
+- その他、細かな修正
+
 ---
 
 ver.0.1 — Prototype
@@ -112,12 +125,25 @@ Implemented Features
 - Successful completion and timeout failure
 - Restart functionality
 
+ver.0.2.0 — Administrator Update
+
+Release Date: October 25, 2026
+Status: In Development
+
+Implemented Features
+
+- Introduction of the administrator (enemy)
+- Administrator patrol and chase system
+- Game over when caught
+- Reorganization of project files (creation of css/ and js/ directories)
+- Various minor fixes
+
 ---
 
 ### 開発状況 | Development Status
 
-本作は現在、試作版 ver.0.1 の段階です。
+本作は現在、試作版 ver.0.2.0 の段階です。
 今後のアップデートで機能や演出を追加していく予定です。
 
-The game is currently in prototype version 0.1.
+The game is currently in prototype version 0.2.0
 More features and visual improvements may be added in future updates.
