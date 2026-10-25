@@ -141,7 +141,7 @@ Implemented Features
 
 ver.0.2.0 — Administrator Update
 
-Release Date: October 25, 2026
+Release Date: October 26, 2026
 Status: In Development
 
 Implemented Features
