@@ -1,8 +1,8 @@
 # 音楽室からの完退 The Last Check
 
-## Version: 0.2.0 (Prototype)
+### Version: 0.3.0 (Prototype)
 
-### 日本語 / English
+## 日本語 / English
 
 ---
 
@@ -10,15 +10,15 @@
 
 ### ゲーム概要
 
-『音楽室からの完退』は、放課後の学校を舞台にした2D探索ゲームです。
+『音楽室からの完退』は、放課後の学校を舞台にした、探索とシミュレーションの要素を組み合わせたゲームです。
 
-プレイヤーは音楽室から出発し、校内の設備を確認して不備を修正しながら、玄関からの完退を目指します。
+プレイヤーは部活動終了後の音楽室から活動を開始します。活動内容を選択し、設備の点検や片付けなど、完退に必要な作業を進めながら校内を探索します。
 
-しかし、校内には管理員さん（鬼）が巡回しています。見つかると追いかけられ、捕まるとゲームオーバーになってしまいます。管理員さんの動きにも注意しながら、すべての不備を解消して完退しましょう。
+校内では、活動内容や行動、場所などに応じてさまざまなイベントが発生します。また、管理員さん（鬼）が校内を巡回しています。見つかると追いかけられ、捕まるとゲームオーバーになってしまいます。
 
-制限時間は3分間。時間内にすべての不備を修正し、玄関へたどり着くことが目標です。
+必要な作業をすべて終え、管理員さんに捕まることなく玄関から学校を退出することが目標です。
 
-本作は現在開発中の試作版です。
+本作は現在開発中のβ版です。
 
 ### 操作方法
 
@@ -30,14 +30,26 @@
 - 玄関から完退する：玄関から学校を出る
 - もう一度プレイ：ゲームを最初からやり直す
 
+### イベントについて
+
+ゲーム中には、活動内容や行動、場所などに応じてさまざまなイベントが発生します。
+
+主なイベントは以下のとおりです。
+
+- 合奏イベント：音楽室の復元作業が必要になります。
+- 先生の話イベント：発生すると制限時間が1分短縮されます。
+- 鍵当番イベント：音楽室の施錠と職員室への鍵の返却が必要になります。
+
+イベントによって通常の点検作業以外のタスクが発生することもあります。タスクパネルを確認し、必要な作業をすべて完了させましょう。
+
 ### クリア条件
 
 1. 校内のすべての不備を修正する。
-2. 3分以内に玄関へ到達する。
+2. 5分以内に玄関へ到達する。
 
 ### ゲームオーバー条件
 
-- 制限時間の3分を超過する。
+- 制限時間の5分を超過する。
 - 管理員さんに捕まる。
 
 ゲームオーバーになった場合は、「もう一度プレイ」を選択して再挑戦してください。
@@ -52,37 +64,49 @@
 
 ### Game Overview
 
-The Last Check is a 2D exploration game set in a school after classes.
+The Last Check is a game that combines exploration and simulation, set in a school after club activities.
 
-Starting in the music room, you must inspect school facilities, fix any problems you find, and make your way to the entrance.
+Players begin in the music room after their club activities. They choose an activity and explore the school while completing tasks such as inspecting facilities and putting equipment away.
 
-However, a school administrator patrols the hallways. If you are spotted, the administrator will chase you. Getting caught results in a game over, so stay alert while completing your inspection.
+Various events occur depending on the selected activity, player actions, and location. Meanwhile, a school administrator patrols the premises. If spotted, the administrator will chase the player. Getting caught results in a game over.
 
-You have 3 minutes to fix every problem and reach the entrance.
+The goal is to complete all required tasks and leave the school through the entrance without getting caught.
 
-This is an early prototype and is still under development.
+This game is currently in development as a beta version.
 
 ### Controls
 
 - ◀ / ▶: Move the character left or right
 - Inspect: Check nearby facilities for problems
 - Fix: Repair any problems you find
-- Enter Hallway: Move from a classroom into the hallway
+- Exit to Hallway: Move from the classroom into the hallway
 - Enter Classroom: Enter a classroom from the hallway
 - Leave School: Exit through the entrance
 - Play Again: Restart the game
 
-### How to Win
+### Events
 
-1. Fix every problem in the school.
-2. Reach the entrance within 3 minutes.
+Various events occur depending on the selected activity, player actions, and location.
+
+The main events include:
+
+- Ensemble Event: Requires the player to restore the music room.
+- Teacher Talk Event: Reduces the remaining time limit by one minute.
+- Key Duty Event: Requires the player to lock the music room and return the key to the staff office.
+
+Some events introduce additional tasks beyond the regular facility inspections. Check the task panel and make sure all required tasks are completed.
+
+### Clear Conditions
+
+1. Fix all problems throughout the school.
+2. Reach the entrance within 5 minutes.
 
 ### Game Over Conditions
 
-- The 3-minute time limit expires.
+- The 5-minute time limit expires.
 - You are caught by the school administrator.
 
-If the game ends in failure, select Play Again to try once more.
+If the game ends in failure, select "Play Again" to try once more.
 
 ### Language Settings
 
@@ -95,7 +119,7 @@ You can switch between Japanese and English from the settings menu on the title 
 ver.0.1 — Prototype
 
 リリース日： 2026-10-23
-ステータス： 開発中（試作版）
+ステータス： 開発中
 
 実装済み機能
 
@@ -121,12 +145,29 @@ ver.0.2.0 — Administrator Update
 - ファイル構成の再編（css/・js/ フォルダの作成）
 - その他、細かな修正
 
+ver.0.3.0 — Event & Activity Update
+
+リリース日：2026-11-19
+ステータス：開発中
+
+実装済み機能
+
+- 活動内容の選択機能（合奏・パート練習・個人練習）
+- 活動内容に応じたゲーム内状況の変化
+- イベントシステムの導入
+- 場所や状況に応じたランダムイベント
+- 校内マップの拡張（分岐廊下・職員室など）
+- 鍵当番イベントと鍵返却ミニゲーム
+- 作業タスクの管理機能
+- 楽器の片付け・音楽室の復元
+- ゲーム画面・操作性の改善
+- その他、細かな修正
 ---
 
 ver.0.1 — Prototype
 
 Release Date: October 23, 2026
-Status: In Development (Prototype)
+Status: In Development
 
 Implemented Features
 
@@ -152,12 +193,30 @@ Implemented Features
 - Reorganization of project files (creation of css/ and js/ directories)
 - Various minor fixes
 
+ver.0.3.0 — Event & Activity Update
+
+Release Date: November 19, 2026
+Status: In Development
+
+Implemented Features
+
+- Activity selection (Ensemble, Section Practice, Individual Practice)
+- Gameplay changes based on selected activities
+- Introduction of the event system
+- Random events based on location and situation
+- Expanded school map (branch hallway, staff office, etc.)
+- Key duty event and key return minigame
+- Task management system
+- Instrument cleanup and music room restoration
+- Improvements to the game interface and controls
+- Various minor fixes
+
 ---
 
 ### 開発状況 | Development Status
 
-本作は現在、試作版 ver.0.2.0 の段階です。
+本作は現在、試作版 ver.0.3.0 の段階です。
 今後のアップデートで機能や演出を追加していく予定です。
 
-The game is currently in prototype version 0.2.0
+The game is currently in prototype version 0.3.0
 More features and visual improvements may be added in future updates.
