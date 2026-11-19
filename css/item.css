@@ -1,0 +1,91 @@
+/* ========================
+   アイテム欄
+======================== */
+
+#inventory {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+
+  width: fit-content;
+  max-width: 190px;
+  padding: 3px 5px;
+
+  background: rgba(20, 25, 35, 0.9);
+  border: 1px solid #777;
+  border-radius: 6px;
+
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+#inventory[hidden] {
+  display: none !important;
+}
+
+/* アイテム配置 */
+#inventory-slots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+/* アイテム */
+.inventory-slot {
+  width: 38px;
+  height: 30px;
+  min-width: 38px;
+  box-sizing: border-box;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid #888;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 選択中 */
+.inventory-slot.selected {
+  border: 2px solid #f5d76e;
+  background: #505044;
+}
+
+/* 懐中電灯ON */
+.inventory-slot.flashlight-on {
+  border: 2px solid #f5d76e;
+  background: #6b5b27;
+  box-shadow: 0 0 8px rgba(255, 220, 100, 0.6);
+}
+
+/* ========================================
+   新・懐中電灯システム
+======================================== */
+
+#lighting-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#lighting-layer svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ========================================
+   共通照明レイヤー
+======================================== */
+
+#game-viewport {
+  position: relative;
+}

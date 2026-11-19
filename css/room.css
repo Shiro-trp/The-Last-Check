@@ -1,0 +1,364 @@
+/* ========================================
+   教室棟
+======================================== */
+.room {
+  height: 280px;
+  min-height: 280px;
+  max-height: 280px;
+  position: relative;
+  overflow: hidden;
+
+  /* 壁・床・境目 */
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0 69%,
+      #8b6547 69% 71%,
+      transparent 71%
+    ),
+    linear-gradient(
+      to bottom,
+      #e8dfce 0 70%,
+      #c99b70 70% 100%
+    );
+
+  border: 5px solid #8b6b45;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.room-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.room-switch button {
+  flex: 1;
+  padding: 8px 4px;
+  font-size: 13px;
+}
+
+#room-name {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+/* 廊下の画面 */
+#hallway-scene[hidden] {
+  display: none;
+}
+
+#hallway-viewport {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid #8b6b45;
+  border-radius: 8px;
+  background: #e8dfce;
+}
+
+/* 横に長い廊下 */
+#hallway-world {
+  position: relative;
+  width: 1660px;
+  height: 100%;
+  background:
+    linear-gradient(
+      to bottom,
+      #e8dfce 0 68%,
+      #8b6547 68% 71%,
+      #c99b70 71% 100%
+    );
+}
+
+/* 教室の入口 */
+.hall-door {
+  position: absolute;
+  top: 55px;
+  width: 100px;
+  height: 135px;
+  border: 5px solid #805b3a;
+  border-bottom: 10px solid #805b3a;
+  background: #b78b60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 入口のラベル */
+.hall-door span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #18212f;
+}
+
+/* 教室の出口 */
+#classroom-door {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  width: 52px;
+  height: 100px;
+  box-sizing: border-box;
+  background: #9b7048;
+  border: 4px solid #67452f;
+  border-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#classroom-door span {
+  color: #fff0d5;
+  font-size: 11px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+}
+
+/* 音楽室の基本背景 */
+.room.music-room {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0 69%,
+      #72533f 69% 71%,
+      transparent 71%
+    ),
+    linear-gradient(
+      to bottom,
+      #d8d5c9 0 70%,
+      #a9805d 70% 100%
+    );
+}
+
+/* 玄関 */
+.entrance {
+  position: absolute;
+  left: 1500px;
+  top: 45px;
+  width: 110px;
+  height: 145px;
+  border: 5px solid #60452f;
+  border-bottom: 10px solid #60452f;
+  background: #8b6547;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.entrance span {
+  color: #fff4d6;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ========================================
+   管理棟
+======================================== */
+
+#branch-hallway-scene[hidden] {
+  display: none;
+}
+
+#branch-hallway-viewport {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+
+  border: 5px solid #8b6b45;
+  border-radius: 8px;
+
+  background: #e8dfce;
+}
+
+#branch-hallway-world {
+  position: relative;
+  width: 600px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #e8dfce 0 68%,
+      #8b6547 68% 71%,
+      #c99b70 71% 100%
+    );
+}
+
+/* 職員玄関への入口 */
+.branch-door {
+  position: absolute;
+  top: 55px;
+
+  width: 100px;
+  height: 135px;
+
+  box-sizing: border-box;
+  border: 5px solid #805b3a;
+  border-bottom: 10px solid #805b3a;
+
+  background: #b78b60;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.branch-door span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #18212f;
+}
+
+/* 分岐廊下のプレイヤー */
+#branch-hall-player {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+  transform-origin: center;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#branch-hall-player img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+/* 歩行アニメーション */
+#branch-hall-player.walking {
+  animation: walk 0.22s infinite alternate ease-in-out;
+}
+
+#branch-hallway-viewport {
+  width: 100%;
+  max-width: 100%;
+  height: 280px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid #8b6b45;
+  border-radius: 8px;
+  background: #e8dfce;
+}
+
+#branch-hallway-world {
+  flex-shrink: 0;
+}
+
+/* 分岐廊下：職員玄関を中央に配置 */
+#staff-entrance-door {
+  left: 250px;
+}
+
+/* 分岐廊下：事務室を右端に配置 */
+#staff-office-door {
+  left: 480px;
+}
+
+/* ========================================
+   事務室
+======================================== */
+
+#staff-office-scene[hidden] {
+  display: none;
+}
+
+/* 事務室の表示範囲 */
+#staff-office-viewport {
+  width: 100%;
+  height: 280px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+
+  border: 5px solid #8b6b45;
+  border-radius: 8px;
+
+  background: #e8dfce;
+}
+
+/* 事務室の内部 */
+#staff-office-world {
+  position: relative;
+  width: 400px; /* 800px → 400px */
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0 69%,
+      #8b6547 69% 71%,
+      transparent 71%
+    ),
+    linear-gradient(
+      to bottom,
+      #e8dfce 0 70%,
+      #c99b70 70% 100%
+    );
+}
+
+/* 事務机 */
+#staff-office-desk {
+  position: absolute;
+  left: 170px;  /* 300px → 170px */
+  bottom: 64px;
+
+  width: 110px; /* 150px → 110px */
+  height: 50px; /* 65px → 50px */
+  box-sizing: border-box;
+
+  background: #9b7048;
+  border: 4px solid #67452f;
+  border-bottom: 8px solid #67452f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff0d5;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* 事務室のプレイヤー */
+#staff-office-player {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+
+  transform-origin: center;
+  will-change: transform;
+}
+
+#staff-office-player img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+}

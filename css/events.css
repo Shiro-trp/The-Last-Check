@@ -1,0 +1,92 @@
+/* ========================================
+   先生の話イベント演出
+======================================== */
+#teacher-talk-overlay,
+#key-duty-overlay {
+  position: fixed;
+  top: calc(18% + 5px);
+  left: 50%;
+  z-index: 10000;
+
+  width: calc(100% - 40px);
+  max-width: 500px;
+
+  box-sizing: border-box;
+  padding: 7px 10px;
+
+  background: rgba(15, 10, 11, 0.95);
+  color: #eee;
+
+  border: 1px solid #713333;
+  border-left: 4px solid #c43b3b;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translate(-50%, -10px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
+}
+
+#teacher-talk-overlay.show,
+#key-duty-overlay.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* 警告表示は省略 */
+.teacher-talk-warning {
+  display: none;
+}
+
+/* タイトル */
+.teacher-talk-content h2 {
+  margin: 0 0 5px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* スクロール通知 */
+.teacher-talk-scroll {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 4px 0;
+
+  border-top: 1px solid #633333;
+  border-bottom: 1px solid #633333;
+}
+
+.teacher-talk-scroll-text {
+  display: inline-block;
+  color: #e8caca;
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 100%;
+
+  animation: teacherTalkScroll 5s linear infinite;
+}
+
+@keyframes teacherTalkScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* 時間表示 */
+.teacher-talk-time {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
