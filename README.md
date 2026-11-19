@@ -116,7 +116,7 @@ You can switch between Japanese and English from the settings menu on the title 
 
 ## バージョン情報 | Version Information
 
-ver.0.1 — Prototype
+### ver.0.1 — Prototype
 
 リリース日： 2026-10-23
 ステータス： 開発中
@@ -132,7 +132,7 @@ ver.0.1 — Prototype
 - 完退成功・時間切れによる完退失敗
 - リスタート機能
 
-ver.0.2.0 — Administrator Update
+### ver.0.2.0 — Administrator Update
 
 リリース日：2026-10-26
 ステータス：開発中
@@ -145,7 +145,7 @@ ver.0.2.0 — Administrator Update
 - ファイル構成の再編（css/・js/ フォルダの作成）
 - その他、細かな修正
 
-ver.0.3.0 — Event & Activity Update
+### ver.0.3.0 — Event & Activity Update
 
 リリース日：2026-11-19
 ステータス：開発中
@@ -164,7 +164,7 @@ ver.0.3.0 — Event & Activity Update
 - その他、細かな修正
 ---
 
-ver.0.1 — Prototype
+### ver.0.1 — Prototype
 
 Release Date: October 23, 2026
 Status: In Development
@@ -180,7 +180,7 @@ Implemented Features
 - Successful completion and timeout failure
 - Restart functionality
 
-ver.0.2.0 — Administrator Update
+### ver.0.2.0 — Administrator Update
 
 Release Date: October 26, 2026
 Status: In Development
@@ -193,7 +193,7 @@ Implemented Features
 - Reorganization of project files (creation of css/ and js/ directories)
 - Various minor fixes
 
-ver.0.3.0 — Event & Activity Update
+### ver.0.3.0 — Event & Activity Update
 
 Release Date: November 19, 2026
 Status: In Development
