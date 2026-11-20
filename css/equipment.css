@@ -345,7 +345,7 @@
   font-weight: bold;
 }
 
-/* hidden属性を優先する */
-.music-object[hidden] {
+/* 普通教室では楽器置き場を非表示 */
+#room:not(.music-room) #instrument-storage {
   display: none;
 }
