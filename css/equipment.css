@@ -344,3 +344,8 @@
   font-size: 12px;
   font-weight: bold;
 }
+
+/* hidden属性を優先する */
+.music-object[hidden] {
+  display: none;
+}
