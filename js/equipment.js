@@ -130,8 +130,15 @@ function renderRoom() {
   );
 
   deskImage.parentElement.hidden = inMusicRoom;
-  instrumentStorage.hidden = !inMusicRoom;
-  room.classList.toggle("music-room", inMusicRoom);
+instrumentStorage.hidden = !inMusicRoom;
+
+// 音楽室以外では楽器置き場を完全に非表示
+if (!inMusicRoom) {
+  cleanupInstrumentsButton.hidden = true;
+  restoreMusicRoomButton.hidden = true;
+}
+
+room.classList.toggle("music-room", inMusicRoom);
 
   updateResult();
   updateFlashlightPosition();
